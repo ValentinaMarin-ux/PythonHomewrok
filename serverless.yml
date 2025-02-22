@@ -1,0 +1,34 @@
+service: mi-primer-lambda
+frameworkVersion: '3'
+
+plugins:
+  - serverless-offline  # para poder corre local 
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+
+  HelloWorld:
+    handler: handler.helloWorld
+    events:
+      - http:
+          path: /helloWorld
+          method: get
+
+
+
+
+      
+
+
+  
+
+
